@@ -1,0 +1,7 @@
+<div class={["Switchboard",@aspect]}>
+  <div class="Status">Clicked: <%= !!@aspect and @aspect != "" && @aspect || "none" %></div>
+  <div class="Switches">
+    <div class="ShowFoo" phx-click="show_foo">Show Foo</div>
+    <div class="ShowBar" phx-click="show_bar">Show Bar</div>
+  </div>
+</div>

@@ -1,0 +1,5 @@
+.Foo > .Title,
+.Bar > .Title {
+  text-align: center;
+}
+

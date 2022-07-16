@@ -1,0 +1,56 @@
+.Switchboard {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  border: 1px solid gray;
+  margin: 1rem 0;
+}
+.Switchboard:before {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: calc( 50% - 6rem);
+   left: 0;
+   text-align: center;
+   content: 'LiveView C';
+   font-size: 8rem;
+   color: grey;
+   opacity: 30%;
+   z-index: -1;
+ }
+
+.Switchboard > .Status {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.Switches {
+  flex: 1;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.Switches > .ShowFoo,
+.Switches > .ShowBar {
+  flex: 1;
+  text-align: center;
+}
+
+.Switches > .ShowFoo:not(:hover),
+.Switches > .ShowBar:not(:hover) {
+   color: gray;
+ }
+
+.Switches > .ShowFoo:hover,
+.Switches > .ShowBar:hover{
+   cursor: pointer;
+   color: black;
+ }
+
+.Switches > .ShowFoo {
+  background-color: rgba( 154, 205, 50, 0.3);
+}
+
+.Switches > .ShowBar {
+  background-color: rgba( 0, 255, 255, 0.3);
+}

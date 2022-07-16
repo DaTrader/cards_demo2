@@ -1,0 +1,6 @@
+<div id={"dln-#{@class}-#{@id}"}
+     class={"dln-#{@class}"}
+     data-sort={"dln-#{@class}-#{updated_sort(@updated)}"}
+     phx-hook="ListillItemHook">
+  <%= render_content( assigns) %>
+</div>

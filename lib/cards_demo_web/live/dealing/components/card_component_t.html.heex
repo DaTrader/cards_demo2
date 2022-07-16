@@ -1,0 +1,10 @@
+<div id={"dln-card-#{@id}"}
+     class="Card"
+     data-sort={"dln-card-#{updated_sort(@updated)}"}
+     phx-update={phx_update(@entry_list_update)}
+     phx-hook="ListillItemHook">
+  <div id={"dln-card-title-#{@id}"}>Some title <%= @id %></div>
+  <%= for entry_assigns <- @entry_list_assigns do %>
+    <.live_component module={CardsDemoWeb.Dealing.EntryComponent} {entry_assigns} />
+  <% end %>
+</div>

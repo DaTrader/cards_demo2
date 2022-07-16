@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, shrink-to-fit=no, user-scalable=no"/>
+    <%= csrf_meta_tag() %>
+    <title><%= assigns[ :page_title] || "Cards Demo" %></title>
+    <link phx-track-static rel="stylesheet" href={Routes.static_path(@conn,"/assets/app.css")}/>
+    <script defer phx-track-static type="text/javascript" src={Routes.static_path(@conn,"/assets/app.js")}></script>
+  </head>
+  <body>
+    <section>
+      <%= live_render @conn, CardsDemoWeb.Dealing.DeckLive, id: :dealing_deck %>
+    </section>
+    <section>
+      <%= live_render @conn, CardsDemoWeb.Switchboard.SwitchLive, id: :switchboard %>
+    </section>
+    <section>
+      <%= @inner_content %>
+    </section>
+  </body>
+</html>
