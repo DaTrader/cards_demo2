@@ -96,7 +96,6 @@ defmodule CardsDemoWeb do
 
       import CardsDemoWeb.ErrorHelpers
       import CardsDemoWeb.Gettext
-      import CardsDemoWeb.ViewHelpers
       alias CardsDemoWeb.Router.Helpers, as: Routes
     end
   end

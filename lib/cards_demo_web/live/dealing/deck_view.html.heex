@@ -1,16 +1,9 @@
-<div id="dln-main">
+<.live_component module={ListContainerComponent} id={"dln-main"}>
   <%= if @deck do %>
-    <div id="dln-deck"
-         class={["DealingDeck",!@deck_visible? && :hidden]}
-         phx-update={phx_update(@card_list_update)}
-         listill
-         phx-hook="ListillContainerHook">
+    <div id="dln-deck" class="DealingDeck" phx-update={phx_update(@card_list_update)}>
       <%= for card_assigns <- @card_list_assigns do %>
         <.live_component module={CardsDemoWeb.Dealing.CardComponent} {card_assigns} />
       <% end %>
-
-      <div id="dln-deck_tail" class="hidden" phx-hook="ListillTailHook" data-print={update_print(assigns)}>
-      </div>
     </div>
   <% end %>
-</div>
+</.live_component>

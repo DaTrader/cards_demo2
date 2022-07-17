@@ -21,6 +21,7 @@ defmodule CardsDemoWeb.Dealing.DeckView do
   @multi_render_fun :prerender
   @before_compile PhoenixLiveViewExt.MultiRender
   import PhoenixLiveViewExt.Listilled.Helpers, only: [ phx_update: 1]
+  alias CardsDemoWeb.Dealing.ListContainerComponent
 
   def prerender( assigns) do
     prerender( "deck_view.html", assigns)

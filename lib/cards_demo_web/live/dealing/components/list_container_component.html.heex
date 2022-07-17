@@ -1,0 +1,6 @@
+<div id={@id} listill phx-hook={@container_hook}>
+  <%= render_slot(@inner_block) %>
+
+  <div id={"#{@id}-tail"} style="display: none;" phx-hook={@tail_hook} data-print={update_print(assigns)}>
+  </div>
+</div>

@@ -39,7 +39,6 @@ defmodule CardsDemoWeb.Dealing.DeckLive do
   defp initialize( socket) do
     socket
     |> load_deck()
-    |> assign_deck_visible?( true)
     |> build_cards( %{})
   end
 
@@ -173,9 +172,5 @@ defmodule CardsDemoWeb.Dealing.DeckLive do
 
   defp assign_dom_map( socket, dom_map) do
     assign( socket, :dom_map, dom_map)
-  end
-
-  defp assign_deck_visible?( socket, visible?) do
-    assign( socket, :deck_visible?, visible?)
   end
 end
